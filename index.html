@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZY 3-D Printing</title>
+<meta name="description" content="ZY 3-D Printing — custom 3D prints made for you.">
+<style>
+:root{--bg:#090a0d;--card:#11141a;--text:#f5f7fa;--muted:#aab2bd;--accent:#7c5cff;--accent2:#24d8ff;--line:#242a33}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 80% 10%,#17123a 0,transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:10;background:rgba(9,10,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:1.15rem;letter-spacing:.5px}.logo span{color:var(--accent)}
+.links{display:flex;gap:24px;color:var(--muted);font-size:.95rem}.links a:hover{color:white}
+.hero{max-width:1100px;margin:auto;padding:105px 22px 85px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;padding:7px 12px;border:1px solid #39334e;border-radius:999px;color:#c9c1ff;background:#15112b;font-size:.8rem;margin-bottom:20px}
+h1{font-size:clamp(2.8rem,7vw,5.7rem);line-height:.98;letter-spacing:-3px;margin-bottom:24px}
+.gradient{background:linear-gradient(90deg,#fff,var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:590px;font-size:1.08rem}
+.buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:13px 19px;border-radius:12px;font-weight:800;border:1px solid var(--line);background:#151820}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn:hover{transform:translateY(-1px)}
+.printer{height:360px;border:1px solid #303640;border-radius:28px;background:linear-gradient(145deg,#171b23,#0c0e12);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 25px 70px #0008}
+.printer:before{content:"";width:190px;height:220px;border:8px solid #8d96a5;border-bottom-width:14px;border-radius:12px;position:absolute}
+.printer:after{content:"";width:130px;height:8px;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:10px;box-shadow:0 0 30px var(--accent2);position:absolute;top:125px}
+.nozzle{position:absolute;width:16px;height:42px;background:#d9dde4;top:104px;border-radius:4px}
+section{max-width:1100px;margin:auto;padding:80px 22px}
+.section-head{margin-bottom:35px}.eyebrow{color:var(--accent2);font-weight:800;text-transform:uppercase;font-size:.75rem;letter-spacing:2px}
+h2{font-size:2.2rem;margin-top:7px} .sub{color:var(--muted);max-width:650px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#414958}
+.icon{font-size:2rem;margin-bottom:12px}.card h3{margin-bottom:6px}.card p{color:var(--muted);font-size:.94rem}
+.product-img{height:190px;border-radius:14px;margin-bottom:17px;background:linear-gradient(135deg,#202633,#0e1116);display:flex;align-items:center;justify-content:center;font-size:3.8rem}
+.price{font-weight:900;margin-top:12px;color:#fff}.price small{color:var(--muted);font-weight:500}
+.steps{counter-reset:step}.step{position:relative;padding-left:58px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-weight:900}
+.form{max-width:700px;background:var(--card);padding:26px;border:1px solid var(--line);border-radius:20px}
+label{display:block;font-weight:700;font-size:.9rem;margin:15px 0 7px}input,textarea,select{width:100%;background:#0b0d11;color:white;border:1px solid #303640;border-radius:10px;padding:12px;font:inherit}textarea{min-height:120px;resize:vertical}
+footer{border-top:1px solid var(--line);padding:35px 22px;color:var(--muted);text-align:center}
+@media(max-width:760px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:70px}.printer{height:280px}.grid{grid-template-columns:1fr}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<nav><div class="nav"><a class="logo" href="#">ZY <span>3-D PRINTING</span></a><div class="links"><a href="#prints">Prints</a><a href="#custom">Custom</a><a href="#about">About</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero">
+<div>
+<div class="badge">CUSTOM 3-D PRINTING</div>
+<h1>Ideas into <span class="gradient">real things.</span></h1>
+<p>Welcome to ZY 3-D Printing. We turn digital designs into useful, fun, and custom-made 3-D printed products.</p>
+<div class="buttons"><a class="btn primary" href="#custom">Request a Custom Print</a><a class="btn" href="#prints">See Our Prints</a></div>
+</div>
+<div class="printer"><div class="nozzle"></div></div>
+</header>
+
+<section id="prints">
+<div class="section-head"><div class="eyebrow">What we make</div><h2>Popular prints</h2><p class="sub">A few examples of the kinds of products ZY 3-D Printing can make. Replace these with your real products and photos.</p></div>
+<div class="grid">
+<div class="card"><div class="product-img">🧩</div><h3>Desk Accessories</h3><p>Stands, organizers, cable holders, and other useful upgrades.</p><div class="price">From $5 <small>depending on size</small></div></div>
+<div class="card"><div class="product-img">🎮</div><h3>Gaming Accessories</h3><p>Controller stands, headset hooks, console accessories, and more.</p><div class="price">From $8 <small>depending on design</small></div></div>
+<div class="card"><div class="product-img">✨</div><h3>Custom Creations</h3><p>Have an idea? We can turn an approved 3-D design into a physical print.</p><div class="price">Custom quote</div></div>
+</div>
+</section>
+
+<section id="custom">
+<div class="section-head"><div class="eyebrow">Made for you</div><h2>How custom orders work</h2></div>
+<div class="grid">
+<div class="card step"><h3>Send your idea</h3><p>Tell us what you want printed and include a picture or design if you have one.</p></div>
+<div class="card step"><h3>Get a quote</h3><p>We review the size, material, and print time and give you a price before printing.</p></div>
+<div class="card step"><h3>We print it</h3><p>Once the details are approved, your print is made and prepared for pickup or delivery.</p></div>
+</div>
+</section>
+
+<section id="about">
+<div class="section-head"><div class="eyebrow">About ZY</div><h2>Small business. Big ideas.</h2><p class="sub">ZY 3-D Printing is focused on making creative, practical, and personalized prints. This section can be updated with your real story, location, turnaround time, and materials.</p></div>
+</section>
+
+<section id="contact">
+<div class="section-head"><div class="eyebrow">Let's make something</div><h2>Request a print</h2><p class="sub">Fill this out to start a custom-order conversation. The form is a demo until you connect it to an email or form service.</p></div>
+<form class="form" onsubmit="event.preventDefault(); document.getElementById('thanks').textContent='Thanks! Your request is ready to send once this form is connected to your contact method.';">
+<label for="name">Name</label><input id="name" required placeholder="Your name">
+<label for="contactInfo">Email or phone</label><input id="contactInfo" required placeholder="How should we contact you?">
+<label for="type">What do you want printed?</label><input id="type" required placeholder="Example: controller stand">
+<label for="details">Details</label><textarea id="details" placeholder="Size, color, quantity, or anything else..."></textarea>
+<button class="btn primary" style="margin-top:16px" type="submit">Submit Request</button>
+<p id="thanks" style="color:var(--accent2);margin-top:15px"></p>
+</form>
+</section>
+
+<footer>© 2026 ZY 3-D Printing · Built for turning ideas into prints.</footer>
+</body>
+</html>
